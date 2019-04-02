@@ -32,6 +32,7 @@ class ListItemFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity?.setTitle(R.string.title_list)
         viewModel = ViewModelProviders.of(this).get(ListItemViewModel::class.java)
         viewModel.itemList.observe(this, Observer<PagedList<Item>> {
             adapter.submitList(it)

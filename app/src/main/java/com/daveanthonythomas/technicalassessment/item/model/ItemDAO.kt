@@ -12,7 +12,7 @@ interface ItemDAO {
     @Query("SELECT * FROM Item")
     fun getAll(): DataSource.Factory<Int, Item>
 
-    @Query("SELECT * FROM Item ORDER BY name")
+    @Query("SELECT * FROM Item ORDER BY name COLLATE NOCASE")
     fun getAllAlphabetic(): DataSource.Factory<Int, Item>
 
     @Query("SELECT * FROM Item ORDER BY createdOn")

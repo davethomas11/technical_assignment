@@ -25,6 +25,7 @@ class AddItemFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity?.setTitle(R.string.title_add)
         viewModel = ViewModelProviders.of(this).get(AddItemViewModel::class.java)
         floatingActionButton.setOnClickListener {
             val text = add_item_text.text.toString()

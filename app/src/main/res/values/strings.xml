@@ -3,4 +3,6 @@
     <string name="garment_name">Garment Name: </string>
     <string name="alphabetical">Alphabetical</string>
     <string name="created_on">Created On</string>
+    <string name="title_list">List Items</string>
+    <string name="title_add">Add Item</string>
 </resources>
