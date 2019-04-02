@@ -38,9 +38,14 @@ class AddItemViewModelTest {
     fun insertItem() {
         val latch = CountDownLatch(1)
         model?.addItem("Test") {
-            val item = itemDAO.getItem("Test")
-            assertNotNull(item)
-            latch.countDown()
+            Observable.fromCallable {
+                val item = itemDAO.getItem("Test")
+                assertNotNull(item)
+                latch.countDown()
+            }
+                .subscribeOn(Schedulers.newThread())
+                .subscribe()
+
         }
 
         latch.await(2000, TimeUnit.MILLISECONDS)
