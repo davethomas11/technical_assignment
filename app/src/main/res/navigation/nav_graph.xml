@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/listItemFragment">
+
+    <fragment android:id="@+id/listItemFragment"
+              android:name="com.daveanthonythomas.technicalassessment.item.list.ListItemFragment"
+              android:label="list_item_fragment" tools:layout="@layout/list_item_fragment">
+        <action android:id="@+id/action_listItemFragment_to_addItemFragment" app:destination="@id/addItemFragment"/>
+    </fragment>
+    <fragment android:id="@+id/addItemFragment"
+              android:name="com.daveanthonythomas.technicalassessment.item.add.AddItemFragment"
+              android:label="add_item_fragment" tools:layout="@layout/add_item_fragment"/>
+</navigation>

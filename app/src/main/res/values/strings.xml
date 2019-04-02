@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Technical Assessment</string>
+    <string name="garment_name">Garment Name: </string>
+    <string name="alphabetical">Alphabetical</string>
+    <string name="created_on">Created On</string>
+</resources>
